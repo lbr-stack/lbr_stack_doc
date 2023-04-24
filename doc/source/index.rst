@@ -5,13 +5,15 @@
 
 Welcome to lbr_fri_ros2's documentation!
 ==============================================
-.. toctree::
-   :hidden:
 
+
+Contents
+========
+.. toctree::
    docs/doxygen/lbr_fri_ros2/html/index
-   docs/demos.rst
-   docs/real_robot_setup.rst
-   docs/software_architecture.rst
+   docs/demos
+   docs/real_robot_setup
+   docs/software_architecture
 
 Quick Start
 ===========
