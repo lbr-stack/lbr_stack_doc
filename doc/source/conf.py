@@ -2,7 +2,7 @@ import pathlib
 import subprocess
 
 # generate doxygen
-pathlib.Path("docs/doxygen/lbr_fri_ros2_stack").mkdir(parents=True) # this is the doxygen OUTPUT_DIRECTORY
+pathlib.Path("docs/doxygen/lbr_fri_ros2").mkdir(parents=True) # this is the doxygen OUTPUT_DIRECTORY
 
 # convert doxygen to sphinx, source and build directory need
 # to follow https://boschglobal.github.io/doxysphinx/docs/getting_started.html#build
@@ -16,7 +16,7 @@ subprocess.run("doxysphinx build . $READTHEDOCS_OUTPUT/html Doxyfile", shell=Tru
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'lbr_fri_ros2_stack'
+project = 'lbr_fri_ros2'
 copyright = '2023, mhubii'
 author = 'mhubii'
 release = '1.0.0'
