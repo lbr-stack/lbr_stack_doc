@@ -11,4 +11,4 @@ Welcome to lbr_fri_ros2's documentation!
 API
 ===
 .. toctree::
-   docs/doxygen/geometry_lib/html/index
+   docs/doxygen/lbr_fri_ros2/html/index
