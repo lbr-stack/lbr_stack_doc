@@ -5,9 +5,9 @@
 
 .. mdinclude:: ../../lbr_fri_ros2_stack/README.md
 
-Contents
-========
 .. toctree::
+   :hidden:
+
    docs/doxygen/lbr_fri_ros2/html/index
    docs/demos
    docs/real_robot_setup
