@@ -1,2 +1,2 @@
 doxysphinx
-myst_parser
+sphinx-mdinclude
