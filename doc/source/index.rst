@@ -9,6 +9,7 @@
    :hidden:
 
    docs/doxygen/lbr_fri_ros2/html/index
+   docs/additional_resources
    docs/demos
    docs/real_robot_setup
    docs/software_architecture
