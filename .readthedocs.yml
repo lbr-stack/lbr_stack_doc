@@ -1,0 +1,16 @@
+version: 2
+
+submodules:
+  include: all
+  recursive: false
+
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.8" # doxysphinx python >= 3.8
+  apt_packages:
+    - graphviz
+
+python:
+   install:
+   - requirements: requirements.txt
