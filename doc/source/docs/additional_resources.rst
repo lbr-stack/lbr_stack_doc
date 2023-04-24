@@ -1,8 +1,9 @@
 Additional Resources
 ====================
-**Note**: These resources may not be re-distributed but are accesible on `KUKA Xpert <https://xpert.kuka.com>`_.
+**Note**: These resources may **not** be re-distributed but are accesible on `KUKA Xpert <https://xpert.kuka.com>`_.
 
 For internal use only, below are links to the school's `Sharepoint <https://emckclac.sharepoint.com>`_:
+
 * Hardware
     * `LBR Med Quickstart <https://emckclac.sharepoint.com/sites/MT-BMEIS-RVIM/Shared%20Documents/docs/inventory/kuka_lbr_med_7_R800/LBR_Med_Quick_Start_en.pdf>`_
     * `LBR Med 7 R800, LBR Med 14 R820, Insructions for Use <https://emckclac.sharepoint.com/sites/MT-BMEIS-RVIM/Shared%20Documents/docs/inventory/kuka_lbr_med_7_R800/GA_LBR_Med_en.pdf>`_
