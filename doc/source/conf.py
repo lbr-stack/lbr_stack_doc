@@ -5,8 +5,10 @@ import subprocess
 doxy_list = glob.glob("*.Doxyfile")
 
 for doxyfile in doxy_list:
+    doxyfile_name = doxyfile.split(".")[0]
+
     # generate doxygen
-    pathlib.Path("docs/doxygen/lbr_fri_ros2").mkdir(
+    pathlib.Path(f"docs/doxygen/{doxyfile_name}").mkdir(
         parents=True
     )  # this is the doxygen OUTPUT_DIRECTORY
     subprocess.run(f"doxygen {doxyfile}", shell=True)
