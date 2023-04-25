@@ -1,8 +1,10 @@
-import glob
 import pathlib
 import subprocess
 
-doxy_list = glob.glob("*.Doxyfile")
+doxy_list = [
+    "fri.Doxyfile",
+    "lbr_fri_ros2.Doxyfile", # lbr_fri_ros2.Doxyfile requires tagfile of fri.Doxyfile
+]
 
 for doxyfile in doxy_list:
     doxyfile_name = doxyfile.split(".")[0]
