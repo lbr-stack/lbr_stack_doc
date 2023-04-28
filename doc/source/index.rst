@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. mdinclude:: ../../lbr_fri_ros2_stack/README.md
+.. mdinclude:: lbr_fri_ros2_stack/README.md
 
 .. toctree::
    :hidden:
