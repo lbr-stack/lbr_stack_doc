@@ -12,7 +12,7 @@ build:
     - graphviz
   jobs:
     post_install:
-      - wget https://raw.githubusercontent.com/KCL-BMEIS/lbr_fri_ros2_stack/dev-humble-demos/lbr_fri_ros2_stack/repos.yml
+      - wget https://raw.githubusercontent.com/KCL-BMEIS/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos.yml
       - vcs import doc/source < repos.yml
 
 python:
