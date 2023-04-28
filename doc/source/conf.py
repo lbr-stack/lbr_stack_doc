@@ -3,16 +3,16 @@ import subprocess
 
 doxy_list = [
     "fri.Doxyfile",
-    "lbr_fri_ros2.Doxyfile", # lbr_fri_ros2.Doxyfile requires tagfile of fri.Doxyfile
+    "lbr_fri_ros2.Doxyfile",  # lbr_fri_ros2.Doxyfile requires tagfile of fri.Doxyfile
 ]
 
 for doxyfile in doxy_list:
     doxyfile_name = doxyfile.split(".")[0]
 
     # generate doxygen
-    pathlib.Path(f"docs/doxygen/{doxyfile_name}").mkdir(
-        parents=True
-    )  # this is the doxygen OUTPUT_DIRECTORY
+    path = pathlib.Path(f"docs/doxygen/{doxyfile_name}")
+    if not path.exists():
+        path.mkdir(parents=True)  # this is the doxygen OUTPUT_DIRECTORY
     subprocess.run(f"doxygen {doxyfile}", shell=True)
 
     # convert doxygen to sphinx, source and build directory need
@@ -37,7 +37,7 @@ release = "1.0.0"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["myst_parser"]
+extensions = ["sphinx_mdinclude", "sphinx_copybutton"]
 
 templates_path = ["_templates"]
 exclude_patterns = []

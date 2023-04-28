@@ -8,9 +8,9 @@
 .. toctree::
    :hidden:
 
+   docs/real_robot_setup
+   lbr_fri_ros2_stack/lbr_demos/doc/lbr_demos
+   docs/software_architecture
+   docs/additional_resources
    docs/doxygen/fri/html/index
    docs/doxygen/lbr_fri_ros2/html/index
-   docs/additional_resources
-   docs/lbr_demos
-   docs/real_robot_setup
-   docs/software_architecture
