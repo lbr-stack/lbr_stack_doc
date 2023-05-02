@@ -8,7 +8,8 @@
 .. toctree::
    :hidden:
 
-   docs/real_robot_setup
+   lbr_fri_ros2_stack/lbr_fri_ros2_stack/doc/lbr_fri_ros2_stack
    lbr_fri_ros2_stack/lbr_demos/doc/lbr_demos
    lbr_fri_ros2_stack/lbr_fri_ros2/doc/lbr_fri_ros2
+   fri/doc/fri
    docs/additional_resources
