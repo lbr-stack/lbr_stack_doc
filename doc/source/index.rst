@@ -12,5 +12,3 @@
    lbr_fri_ros2_stack/lbr_demos/doc/lbr_demos
    lbr_fri_ros2_stack/lbr_fri_ros2/doc/lbr_fri_ros2
    docs/additional_resources
-   docs/doxygen/fri/html/index
-   docs/doxygen/lbr_fri_ros2/html/index
