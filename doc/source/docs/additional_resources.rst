@@ -1,6 +1,7 @@
 Additional Resources
 ====================
-**Note**: These resources may **not** be re-distributed but are accesible on `KUKA Xpert <https://xpert.kuka.com>`_.
+.. note::
+    These resources may **not** be re-distributed but are accesible on `KUKA Xpert <https://xpert.kuka.com>`_.
 
 For internal use only, below are links to the King's `Sharepoint <https://emckclac.sharepoint.com>`_:
 
