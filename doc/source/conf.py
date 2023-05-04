@@ -46,7 +46,14 @@ extensions = [
 ]
 
 templates_path = ["_templates"]
-exclude_patterns = []
+exclude_patterns = ["links.rst"]
+
+# Make rst_epilog a variable, so you can add other epilog parts to it
+rst_epilog = ""
+
+# Read link all targets from file
+with open("docs/links.rst") as f:
+    rst_epilog += f.read()
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
