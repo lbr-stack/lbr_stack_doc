@@ -7,9 +7,16 @@
 
 .. toctree::
    :hidden:
+   :caption: Documentation
 
    lbr_fri_ros2_stack/lbr_fri_ros2_stack/doc/lbr_fri_ros2_stack
    lbr_fri_ros2_stack/lbr_demos/doc/lbr_demos
    lbr_fri_ros2_stack/lbr_fri_ros2/doc/lbr_fri_ros2
    fri/doc/fri
    docs/additional_resources
+
+.. toctree::
+   :hidden:
+   :caption: Getting Involved
+
+   Source Code <https://github.com/kCL-BMEIS/lbr_fri_ros2_stack>
