@@ -3,7 +3,7 @@ Additional Resources
 .. note::
     These resources may **not** be re-distributed but are accesible on `KUKA Xpert`_.
 
-For internal use only, below are links to the King's `King's Sharepoint`_:
+For internal use only, below are links to `King's Sharepoint`_:
 
 * Hardware:
     * `LBR Med Quickstart`_
