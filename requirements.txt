@@ -1,3 +1,4 @@
 doxysphinx
+sphinx-copybutton
 sphinx-mdinclude
 vcstool

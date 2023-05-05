@@ -3,14 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. mdinclude:: ../../lbr_fri_ros2_stack/README.md
+.. mdinclude:: lbr_fri_ros2_stack/README.md
 
 .. toctree::
    :hidden:
 
-   docs/doxygen/fri/html/index
-   docs/doxygen/lbr_fri_ros2/html/index
+   lbr_fri_ros2_stack/lbr_fri_ros2_stack/doc/lbr_fri_ros2_stack
+   lbr_fri_ros2_stack/lbr_demos/doc/lbr_demos
+   lbr_fri_ros2_stack/lbr_fri_ros2/doc/lbr_fri_ros2
+   fri/doc/fri
    docs/additional_resources
-   docs/demos
-   docs/real_robot_setup
-   docs/software_architecture
