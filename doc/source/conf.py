@@ -43,10 +43,24 @@ extensions = [
     "sphinx.ext.autosectionlabel",
     "sphinx_panels",
     "sphinxcontrib.images",
+    "sphinxcontrib.doxylink",
 ]
 
 templates_path = ["_templates"]
 exclude_patterns = ["links.rst"]
+
+# Doxylink
+doxygen_root = "docs/doxygen"
+doxylink = {
+    "fri": (
+        f"{doxygen_root}/fri/html/tagfile.xml",
+        f"{doxygen_root}/fri/html",
+    ),
+    "lbr_fri_ros2": (
+        f"{doxygen_root}/lbr_fri_ros2/html/tagfile.xml",
+        f"{doxygen_root}/lbr_fri_ros2/html",
+    ),
+}
 
 # Make rst_epilog a variable, so you can add other epilog parts to it
 rst_epilog = ""
