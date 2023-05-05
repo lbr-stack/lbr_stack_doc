@@ -1,4 +1,5 @@
 doxysphinx
+sphinxcontrib-images
 sphinx-copybutton
 sphinx-mdinclude
 sphinx-panels
