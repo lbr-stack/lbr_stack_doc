@@ -15,7 +15,7 @@ authors:
   - name: Christopher E. Mower
     orcid: 0000-0002-3929-9391
     affiliation: 1
-  - name: S\'{e}bastien Ourselin
+  - name: Sebastien Ourselin
     orcid: 0000-0002-5694-5340
     affiliation: 1
   - name: Tom Vercauteren
