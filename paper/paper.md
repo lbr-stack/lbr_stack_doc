@@ -10,18 +10,21 @@ tags:
 authors:
   - name: Martin Huber
     orcid: 0000-0003-4603-6773
+    corresponding: true
     affiliation: 1
-  - name: Sebastien Ourselin
+  - name: Christopher E. Mower
+    orcid: 0000-0002-3929-9391
+    affiliation: 1
+  - name: S\'{e}bastien Ourselin
     orcid: 0000-0002-5694-5340
-    corresponding: false
     affiliation: 1
   - name: Tom Vercauteren
     orcid: 0000-0003-1794-0456
-    corresponding: true
+    equal-contrib: true
     affiliation: 1
   - name: Christos Bergeles
     orcid: 0000-0002-9152-3194
-    corresponding: true
+    equal-contrib: true
     affiliation: 1
 affiliations:
  - name: School of Biomedical Engineering and Image Sciences, King's College London, United Kingdom
