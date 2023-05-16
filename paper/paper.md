@@ -38,10 +38,10 @@ bibliography: paper.bib
 ---
 
 # Summary
-The `LBR FRI ROS 2 Stack` is a collection of packages that integrate the `KUKA LBR iiwa7/14` and `KUKA LBR Med7/14` robots into the Robot Operating System (ROS) and ROS 2. For brevity, and due to the architectural advantages over ROS [@ros2], only ROS 2 is considered in the following. The `LBR FRI ROS 2 Stack` supports the Gazebo simulation [@gazebo] as well as communication to the real robots. It is designed for mission critical hard real-time applications and operates through KUKA's Fast Robot Interface (FRI) [@fri]. Following packages are provided:
+The `LBR FRI ROS 2 Stack` is a collection of packages that integrate the `KUKA LBR Med7/14` and `KUKA LBR iiwa7/14` robots into the Robot Operating System (ROS) and ROS 2. For brevity, and due to the architectural advantages over ROS [@ros2], only ROS 2 is considered in the following. The `LBR FRI ROS 2 Stack` supports the Gazebo simulation [@gazebo] as well as communication with real hardware. It is designed for mission critical hard real-time applications and operates through KUKA's Fast Robot Interface (FRI) [@fri]. The following packages are provided:
 
 - **lbr_bringup**: Python library for launching the different components.
-- **lbr_description**: Description files for the `iiwa7/14` and `Med7/14` robots.
+- **lbr_description**: Description files for the `Med7/14` and `iiwa7/14` robots.
 - **lbr_demos**: Demonstrations for simulation and the real robots.
 - **lbr_fri_msgs**: Interface Definition Language (IDL) equivalent of FRI protocol buffers.
 - **lbr_fri_ros2**: FRI ROS 2 interface through `realtime_tools` [@ros_control].
@@ -50,21 +50,21 @@ The `LBR FRI ROS 2 Stack` is a collection of packages that integrate the `KUKA L
 
 For supporting different FRI versions, we outsource one additional package:
 
-- **fri**: Integration of the FRI into the ROS 2 `ament_cmake` build sytem.
+- **fri**: Integration of KUKA's original FRI client library into the ROS 2 `ament_cmake` build sytem.
 
 This separation enables the community to implement future changes should they depend on other FRI versions.
 
 # Statement of need
-An overview of existing work that interfaces the KUKA LBRs from an external computer is given in Table 1. These works can broadly be classified into custom communication solutions [@iiwa_stack; @kuka_sunrise_toolbox; @libiiwa] and communication solutions through KUKA's FRI UDP channel [@iiwa_ros; @iiwa_ros2]. The former can offer greater flexibility while the latter offer a well defined interface and direct software support from KUKA. Contrary to the custom communication solutions, the FRI solutions additionally enable hard real-time communication, which is often benefitial for mission-critical development. Stemming from transitional medical research, this work therefore focuses on the FRI.
+An overview of existing work that interfaces the KUKA LBRs from an external computer is given in Table 1. We broadly classify these works into custom communication solutions [@iiwa_stack; @kuka_sunrise_toolbox; @libiiwa] and communication solutions through KUKA's FRI UDP channel [@iiwa_ros; @iiwa_ros2]. The former can offer greater flexibility while the latter offer a well defined interface and direct software support from KUKA. Contrary to the custom communication solutions, the FRI solutions additionally enable hard real-time communication, that is beneficial for mission-critical development. Stemming from translational medical research, this work therefore focuses on the FRI.
 
-Design flaws with the current FRI solutions are:
+Limitations with the current FRI solutions are:
 
 1. Maintainability:
     * Modified client source code [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros).
     * FRI client library tangled into source code [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2).
-2. Subset support of FRI functionality. Both, [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros) and [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2), exclusively aim at providing implementations of the ROS 1/2 hardware abstraction layer. This does not support:
+2. Partial support of FRI functionality. Both, [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros) and [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2), exclusively aim at providing implementations of the ROS 1/2 hardware abstraction layer. This does not support:
     * FRI's cartesian impedance control mode.
-    * FRI's cartesian control mode.
+    * FRI's cartesian control mode (FRI version 2 and above).
 
 This work solves 1. by outsourcing the FRI into a separate ROS 2 package, which leaves the FRI's source code untouched and only provides `ament_cmake` build integration. 2. is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers. These can be interfaced from ROS 1/2 topics or from the ROS 1/2 hardware abstraction layer. The final original contribution of this work is to add support for the `KUKA LBR Med7/14` robots, which, to the best author's knowledge, does not exist in any other work.
 
@@ -82,7 +82,7 @@ Table: Overview of existing frameworks for interfacing the KUKA LBRs. A square i
 # Acknowledgement
 We want to especially acknowledge the work in [@iiwa_stack], as this served as a starting ground for the presented work.
 
-This work was supported by core and project funding from the Wellcome/EPSRC [WT203148/Z/16/Z; NS/A000049/1; WT101957; NS/A000027/1]. This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 101016985 (FAROS project).
+This work was supported by core funding from the Wellcome/EPSRC [WT203148/Z/16/Z; NS/A000049/1]. This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 101016985 (FAROS project).
 
 # References
 <!-- compiled paper.bib through pandoc -->
