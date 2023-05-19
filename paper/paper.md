@@ -38,6 +38,8 @@ bibliography: paper.bib
 ---
 
 # Summary
+<!-- targeted at non-expert readers!! -->
+
 The `LBR FRI ROS 2 Stack` is a collection of packages that integrate the `KUKA LBR Med7/14` and `KUKA LBR iiwa7/14` robots into the Robot Operating System (ROS) and ROS 2. For brevity, and due to the architectural advantages over ROS [@ros2], only ROS 2 is considered in the following. The `LBR FRI ROS 2 Stack` supports the Gazebo simulation [@gazebo] as well as communication with real hardware. It is designed for mission critical hard real-time applications and operates through KUKA's Fast Robot Interface (FRI) [@fri]. The following packages are provided:
 
 - **lbr_bringup**: Python library for launching the different components.
@@ -55,7 +57,9 @@ For supporting different FRI versions, we outsource one additional package:
 This separation enables the community to implement future changes should they depend on other FRI versions.
 
 # Statement of need
-An overview of existing work that interfaces the KUKA LBRs from an external computer is given in Table 1. We broadly classify these works into custom communication solutions [@iiwa_stack; @kuka_sunrise_toolbox; @libiiwa] and communication solutions through KUKA's FRI UDP channel [@iiwa_ros; @iiwa_ros2]. The former can offer greater flexibility while the latter offer a well defined interface and direct software support from KUKA. Contrary to the custom communication solutions, the FRI solutions additionally enable hard real-time communication, that is beneficial for mission-critical development. Stemming from translational medical research, this work therefore focuses on the FRI.
+<!-- statement of need in a research context -->
+
+An overview of existing work that interfaces the KUKA LBRs from an external computer is given in Table 1. We broadly classify these works into custom communication solutions [@iiwa_stack; @kuka_sunrise_toolbox; @libiiwa] and communication solutions through KUKA's FRI UDP channel [@iiwa_ros; @iiwa_ros2]. The former can offer greater flexibility while the latter offer a well defined interface and direct software support from KUKA. Contrary to the custom communication solutions, the FRI solutions additionally enable hard real-time communication, that is beneficial for mission critical development. Stemming from translational medical research, this work therefore focuses on the FRI.
 
 Limitations with the current FRI solutions are:
 
@@ -79,8 +83,10 @@ This work solves 1. by outsourcing the FRI into a separate ROS 2 package, which 
 
 Table: Overview of existing frameworks for interfacing the KUKA LBRs. A square indicates support for the respective feature. List of abbreviations: Hard Real-time (**RT**), Position Control (**Pos**), Impedance Control (**Imp**), Cartesian Impedance Control (**Cart Imp**), Hardware Interface (**HW IF**). 
 
+<!-- maybe mention usage? viper, faros, endoscopy -->
+
 # Acknowledgement
-We want to especially acknowledge the work in [@iiwa_stack], as this served as a starting ground for the presented work.
+We want to acknowledge the work in [@iiwa_stack], as their MoveIt configurations were utilized in a first iteration of this project.
 
 This work was supported by core funding from the Wellcome/EPSRC [WT203148/Z/16/Z; NS/A000049/1]. This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 101016985 (FAROS project).
 
