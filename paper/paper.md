@@ -38,7 +38,9 @@ bibliography: paper.bib
 ---
 
 # Summary
-The `LBR-Stack` is a collection of packages that simplify the usage and extend the capabilities of KUKA's Fast Robot Interface (FRI) [@fri]. It is designed for mission critical hard real-time applications. Supported are the `KUKA LBR Med7/14` and `KUKA LBR iiwa7/14` robots in the Gazebo simulation [@gazebo] and for communication with real hardware. At the `LBR-Stack`'s core are two packages:
+The `LBR-Stack` is a collection of packages that simplify the usage and extend the capabilities of KUKA's Fast Robot Interface (FRI) [@fri]. It is designed for mission critical hard real-time applications. Supported are the `KUKA LBR Med7/14` and `KUKA LBR iiwa7/14` robots in the Gazebo simulation [@gazebo] and for communication with real hardware. 
+
+At the `LBR-Stack`'s core are two packages:
 
 - **fri**: Integration of KUKA's original FRI client library into CMake.
 - **fri_vendor**: Vendor library that integrates the **fri** into the ROS 2 build sytem.
@@ -74,7 +76,7 @@ Limitations with the current FRI solutions are:
     * FRI's cartesian impedance control mode.
     * FRI's cartesian control mode (FRI version 2 and above).
 
-This work solves 1. by outsourcing the FRI into a separate ROS 2 package, which leaves the FRI's source code untouched and only provides `ament_cmake` build integration. 2. is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers. These can be interfaced from ROS 1/2 topics or from the ROS 1/2 hardware abstraction layer. The final original contribution of this work is to add support for the `KUKA LBR Med7/14` robots, which, to the best author's knowledge, does not exist in any other work.
+The first original contribution of this work is to add support for the `KUKA LBR Med7/14` robots, which, to the best author's knowledge, does not exist in any other work. The second novel contribution of this work is to provide Python bindings. This work solves the maintainability by outsourcing the FRI into the separate **fri** and **fri_vendor** packages, which leaves the FRI's source code untouched and simply provides build support. 4. is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers in **lbr_fri_msgs**. These messages can then be interfaced from ROS 1/2 topics or from the ROS 1/2 hardware abstraction layer.
 
 | Framework       | iiwa | Med | ROS | ROS 2  | RT | FRI | Pos | Imp | Cart Imp | HW IF  | 
 | --------------- | ---- |---- | --- | ------ | -- | ---- | --- | --- | -------- | ------ |
@@ -86,10 +88,6 @@ This work solves 1. by outsourcing the FRI into a separate ROS 2 package, which 
 | [KST-KUKA](https://github.com/Modi1987/KST-Kuka-Sunrise-Toolbox)     | \bullet |         |         |         |         |         | \bullet | \bullet | \bullet |         |
 
 Table: Overview of existing frameworks for interfacing the KUKA LBRs. A square indicates support for the respective feature. List of abbreviations: Hard Real-time (**RT**), Position Control (**Pos**), Impedance Control (**Imp**), Cartesian Impedance Control (**Cart Imp**), Hardware Interface (**HW IF**). 
-
-<!-- maybe mention usage? viper, faros, endoscopy.... -->
-
-<!-- de-couple contributions -->
 
 # Acknowledgement
 We want to acknowledge the work in [@iiwa_stack], as their MoveIt configurations were utilized in a first iteration of this project.
