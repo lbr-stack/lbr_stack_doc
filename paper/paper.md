@@ -38,7 +38,7 @@ bibliography: paper.bib
 ---
 
 # Summary
-The `LBR-Stack` is a collection of packages that simplify the usage and extend the capabilities of KUKA's Fast Robot Interface (FRI) [@fri]. It is designed for mission critical hard real-time applications. Supported are the `KUKA LBR Med7/14` and `KUKA LBR iiwa7/14` robots in the Gazebo simulation [@gazebo] and for communication with real hardware. 
+The `LBR-Stack` is a collection of packages that simplify the usage and extend the capabilities of KUKA's Fast Robot Interface (FRI) [@fri]. It is designed for mission critical hard real-time applications. Supported are the `KUKA LBR Med7/14` and `KUKA LBR iiwa7/14` robots in the Gazebo simulation [@gazebo] and for communication with real hardware. A demo video can be found [here](https://www.linkedin.com/posts/mhubii_robotics-opensource-ros2-activity-7009974676017848320-S3U5/?utm_source=share&utm_medium=member_desktop).
 
 At the `LBR-Stack`'s core are two packages:
 
