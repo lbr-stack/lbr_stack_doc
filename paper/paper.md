@@ -1,5 +1,5 @@
 ---
-title: 'LBR FRI ROS 2 Stack: Lightweight FRI ROS 2 Interface'
+title: 'LBR-Stack: ROS 2 and Python Integration of KUKA FRI for Med and IIWA Robots'
 tags:
   - C++
   - Python
@@ -38,9 +38,17 @@ bibliography: paper.bib
 ---
 
 # Summary
-<!-- targeted at non-expert readers!! -->
+The `LBR-Stack` is a collection of packages that simplify the usage and extend the capabilities of KUKA's Fast Robot Interface (FRI) [@fri]. It is designed for mission critical hard real-time applications. Supported are the `KUKA LBR Med7/14` and `KUKA LBR iiwa7/14` robots in the Gazebo simulation [@gazebo] and for communication with real hardware. At the `LBR-Stack`'s core are two packages:
 
-The `LBR FRI ROS 2 Stack` is a collection of packages that integrate the `KUKA LBR Med7/14` and `KUKA LBR iiwa7/14` robots into the Robot Operating System (ROS) and ROS 2. For brevity, and due to the architectural advantages over ROS [@ros2], only ROS 2 is considered in the following. The `LBR FRI ROS 2 Stack` supports the Gazebo simulation [@gazebo] as well as communication with real hardware. It is designed for mission critical hard real-time applications and operates through KUKA's Fast Robot Interface (FRI) [@fri]. The following packages are provided:
+- **fri**: Integration of KUKA's original FRI client library into CMake.
+- **fri_vendor**: Vendor library that integrates the **fri** into the ROS 2 build sytem.
+
+All other packages are built on top. These include Python bindings and packages for integration into the Robot Operating System (ROS) and ROS 2:
+
+ - **pyFRIClient**: Python bindings for the **fri**.
+ - **lbr_fri_ros2_stack**: ROS 1/2 integration of the `KUKA LBR`s through the **fri_vendor**.
+
+For brevity, and due to the architectural advantages over ROS [@ros2], only ROS 2 is considered in the following. The **lbr_fri_ros2_stack** comprises the following packages:
 
 - **lbr_bringup**: Python library for launching the different components.
 - **lbr_description**: Description files for the `Med7/14` and `iiwa7/14` robots.
@@ -50,12 +58,6 @@ The `LBR FRI ROS 2 Stack` is a collection of packages that integrate the `KUKA L
 - **lbr_hardware_interface**: Interface for `ros2_control` [@ros2_control].
 - **lbr_moveit_config**: MoveIt 2 configurations [@moveit].
 
-For supporting different FRI versions, we outsource one additional package:
-
-- **fri**: Integration of KUKA's original FRI client library into the ROS 2 `ament_cmake` build sytem.
-
-This separation enables the community to implement future changes should they depend on other FRI versions.
-
 # Statement of need
 <!-- statement of need in a research context -->
 
@@ -63,10 +65,12 @@ An overview of existing work that interfaces the KUKA LBRs from an external comp
 
 Limitations with the current FRI solutions are:
 
-1. Maintainability:
+1. Only support `iiwa7/14` robots, not `Med7/14`.
+2. Don't provide Python bindings.
+3. Maintainability:
     * Modified client source code [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros).
     * FRI client library tangled into source code [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2).
-2. Partial support of FRI functionality. Both, [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros) and [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2), exclusively aim at providing implementations of the ROS 1/2 hardware abstraction layer. This does not support:
+4. Partial support of FRI functionality. Both, [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros) and [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2), exclusively aim at providing implementations of the ROS 1/2 hardware abstraction layer. This does not support:
     * FRI's cartesian impedance control mode.
     * FRI's cartesian control mode (FRI version 2 and above).
 
@@ -83,7 +87,9 @@ This work solves 1. by outsourcing the FRI into a separate ROS 2 package, which 
 
 Table: Overview of existing frameworks for interfacing the KUKA LBRs. A square indicates support for the respective feature. List of abbreviations: Hard Real-time (**RT**), Position Control (**Pos**), Impedance Control (**Imp**), Cartesian Impedance Control (**Cart Imp**), Hardware Interface (**HW IF**). 
 
-<!-- maybe mention usage? viper, faros, endoscopy -->
+<!-- maybe mention usage? viper, faros, endoscopy.... -->
+
+<!-- de-couple contributions -->
 
 # Acknowledgement
 We want to acknowledge the work in [@iiwa_stack], as their MoveIt configurations were utilized in a first iteration of this project.
