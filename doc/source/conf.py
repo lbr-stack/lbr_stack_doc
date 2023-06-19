@@ -78,7 +78,7 @@ html_theme_options = {
     "github_url": "https://github.com/kCL-BMEIS/lbr_fri_ros2_stack/tree/humble",
     "switcher": {
         "version_match": "humble",
-        "json_url": "switcher.json",
+        "json_url": "https://raw.githubusercontent.com/KCL-BMEIS/lbr_fri_ros2_stack_doc/main/doc/source/switcher.json",
     },
     "navbar_start": ["navbar-logo", "version-switcher"],
 }
