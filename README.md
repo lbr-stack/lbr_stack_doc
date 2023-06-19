@@ -4,7 +4,22 @@
 This repository holds the documentation for the [lbr_fri_ros2_stack](https://github.com/KCL-BMEIS/lbr_fri_ros2_stack).
 
 ## Build Documentation Locally
-To build locally, in [conf.py](doc/source/conf.py) change
+To build locally:
+1. Clone this repository
+
+```shell
+git clone --recursive git@github.com:KCL-BMEIS/lbr_fri_ros2_stack_doc.git
+cd lbr_fri_ros2_stack_doc
+```
+
+2. Clone the `lbr_fri_ros2_stack`, e.g. via (this uses [vcs](https://github.com/dirk-thomas/vcstool#how-to-install-vcstool))
+
+```shell
+wget https://raw.githubusercontent.com/KCL-BMEIS/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos.yml
+vcs import doc/source < repos.yml
+```
+
+3. In [conf.py](doc/source/conf.py) change
 
 ```python
 f"doxysphinx build . $READTHEDOCS_OUTPUT/html {doxyfile}", shell=True
