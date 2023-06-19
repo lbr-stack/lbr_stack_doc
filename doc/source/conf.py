@@ -17,7 +17,7 @@ for doxyfile in doxy_list:
 
     # convert doxygen to sphinx, source and build directory need
     # to follow https://boschglobal.github.io/doxysphinx/docs/getting_started.html#build
-    subprocess.run(f"doxysphinx build . html {doxyfile}", shell=True)
+    subprocess.run(f"doxysphinx build . $READTHEDOCS_OUTPUT/html {doxyfile}", shell=True)
 
 # Configuration file for the Sphinx documentation builder.
 #
@@ -77,7 +77,7 @@ html_theme = "pydata_sphinx_theme"
 html_theme_options = {
     "switcher": {
         "version_match": "humble",
-        "json_url": "https://github.com/KCL-BMEIS/lbr_fri_ros2_stack_doc/blob/main/doc/source/switcher.json",
+        "json_url": "https://raw.githubusercontent.com/KCL-BMEIS/lbr_fri_ros2_stack_doc/main/doc/source/switcher.json",
         "navbar_start": ["navbar-logo", "version-switcher"],
     }
 }
