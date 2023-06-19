@@ -76,7 +76,7 @@ pygments_style = "sphinx"
 html_theme = "pydata_sphinx_theme"
 html_theme_options = {
     "switcher": {
-        "version_math": "humble",
+        "version_match": "humble",
         "json_url": "https://github.com/KCL-BMEIS/lbr_fri_ros2_stack_doc/blob/main/doc/source/switcher.json",
         "navbar_start": ["navbar-logo", "version-switcher"],
     }
