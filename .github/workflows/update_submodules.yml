@@ -11,7 +11,7 @@ jobs:
       - name: Checkout submodules
         uses: actions/checkout@v3
         with:
-          ref: humble
+          ref: main
           submodules: true
       - name: Update submodules
         run: |
@@ -24,4 +24,4 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          branch: humble
+          branch: main
