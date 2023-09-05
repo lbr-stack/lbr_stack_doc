@@ -80,7 +80,7 @@ The first original contribution of this work is to add support for the `KUKA LBR
 
 | Framework       | iiwa | Med | ROS | ROS 2  | RT | FRI | Pos | Imp | Cart Imp | HW IF  | 
 | --------------- | ---- |---- | --- | ------ | -- | ---- | --- | --- | -------- | ------ |
-|[lbr_fri_ros2_stack](https://github.com/kCL-BMEIS/lbr_fri_ros2_stack) | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet |
+|[lbr_fri_ros2_stack](https://github.com/lbr-stack/lbr_fri_ros2_stack) | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet |
 | [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros)                    | \bullet |         | \bullet |         | \bullet | \bullet | \bullet | \bullet |         | \bullet |
 | [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2)             | \bullet |         |         | \bullet | \bullet | \bullet | \bullet | \bullet |         | \bullet |
 | [iiwa-stack](https://github.com/IFL-CAMP/iiwa_stack)                 | \bullet |         | \bullet |         |         |         | \bullet | \bullet | \bullet |         |

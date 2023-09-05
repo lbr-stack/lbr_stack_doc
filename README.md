@@ -1,21 +1,21 @@
 # lbr_fri_ros2_stack_doc
 [![Documentation Status](https://readthedocs.org/projects/lbr-fri-ros2-stack-doc/badge/?version=humble)](https://lbr-fri-ros2-stack-doc.readthedocs.io/en/humble/?badge=humble)
 
-This repository holds the documentation for the [lbr_fri_ros2_stack](https://github.com/KCL-BMEIS/lbr_fri_ros2_stack).
+This repository holds the documentation for the [lbr_fri_ros2_stack](https://github.com/lbr-stack/lbr_fri_ros2_stack).
 
 ## Build Documentation Locally
 To build locally:
 1. Clone this repository
 
 ```shell
-git clone --recursive git@github.com:KCL-BMEIS/lbr_fri_ros2_stack_doc.git
+git clone --recursive git@github.com:lbr-stack/lbr_fri_ros2_stack_doc.git
 cd lbr_fri_ros2_stack_doc
 ```
 
 2. Clone the `lbr_fri_ros2_stack`, e.g. via (this uses [vcs](https://github.com/dirk-thomas/vcstool#how-to-install-vcstool))
 
 ```shell
-wget https://raw.githubusercontent.com/KCL-BMEIS/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos.yml
+wget https://raw.githubusercontent.com/lbr-stack/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos.yml
 vcs import doc/source < repos.yml
 ```
 
