@@ -30,7 +30,7 @@ for doxyfile in doxy_list:
 project = "lbr_fri_ros2_stack"
 copyright = "2023, mhubii"
 author = "mhubii"
-release = "1.2.0"
+release = "1.2.5"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
