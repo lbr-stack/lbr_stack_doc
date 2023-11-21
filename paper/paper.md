@@ -80,12 +80,12 @@ The first original contribution of this work is to add support for the `KUKA LBR
 
 | Framework       | iiwa | Med | ROS | ROS 2  | RT | FRI | pyFRI | Pos | Imp | Cart Imp | HW IF  | 
 | --------------- | ---- |---- | --- | ------ | -- | --- | ----- | --- | --- | -------- | ------ |
-| [lbr-stack](https://github.com/lbr-stack)                        | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet |
-| [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros)                | \bullet |         | \bullet |         | \bullet | \bullet |         | \bullet | \bullet |         | \bullet |
-| [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2)         | \bullet |         |         | \bullet | \bullet | \bullet |         | \bullet | \bullet |         | \bullet |
-| [iiwa-stack](https://github.com/IFL-CAMP/iiwa_stack)             | \bullet |         | \bullet |         |         |         |         | \bullet | \bullet | \bullet |         |
-| [libiiwa](https://github.com/Toni-SM/libiiwa)                    | \bullet |         | \bullet | \bullet |         |         |         | \bullet | \bullet | \bullet |         |
-| [KST-KUKA](https://github.com/Modi1987/KST-Kuka-Sunrise-Toolbox) | \bullet |         |         |         |         |         |         | \bullet | \bullet | \bullet |         |
+| [lbr-stack](https://github.com/lbr-stack)                        | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ |
+| [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros)                | $\bullet$ |           | $\bullet$ |           | $\bullet$ | $\bullet$ |           | $\bullet$ | $\bullet$ |           | $\bullet$ |
+| [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2)         | $\bullet$ |           |           | $\bullet$ | $\bullet$ | $\bullet$ |           | $\bullet$ | $\bullet$ |           | $\bullet$ |
+| [iiwa-stack](https://github.com/IFL-CAMP/iiwa_stack)             | $\bullet$ |           | $\bullet$ |           |           |           |           | $\bullet$ | $\bullet$ | $\bullet$ |           |
+| [libiiwa](https://github.com/Toni-SM/libiiwa)                    | $\bullet$ |           | $\bullet$ | $\bullet$ |           |           |           | $\bullet$ | $\bullet$ | $\bullet$ |           |
+| [KST-KUKA](https://github.com/Modi1987/KST-Kuka-Sunrise-Toolbox) | $\bullet$ |           |           |           |           |           |           | $\bullet$ | $\bullet$ | $\bullet$ |           |
 
 Table: Overview of existing frameworks for interfacing the KUKA LBRs. A square indicates support for the respective feature. List of abbreviations: Hard Real-time (**RT**), Position Control (**Pos**), Impedance Control (**Imp**), Cartesian Impedance Control (**Cart Imp**), Hardware Interface (**HW IF**). 
 
