@@ -1,15 +1,15 @@
-# lbr_fri_ros2_stack_doc
+# lbr_stack_doc
 [![Documentation Status](https://readthedocs.org/projects/lbr-fri-ros2-stack-doc/badge/?version=humble)](https://lbr-fri-ros2-stack-doc.readthedocs.io/en/humble/?badge=humble)
 
-This repository holds the documentation for the [lbr_fri_ros2_stack](https://github.com/lbr-stack/lbr_fri_ros2_stack).
+This repository holds the documentation for the [lbr-stack](https://github.com/lbr-stack).
 
 ## Build Documentation Locally
 To build locally:
 1. Clone this repository
 
 ```shell
-git clone --recursive git@github.com:lbr-stack/lbr_fri_ros2_stack_doc.git
-cd lbr_fri_ros2_stack_doc
+git clone --recursive git@github.com:lbr-stack/lbr_stack_doc.git
+cd lbr_stack_doc
 ```
 
 2. Clone the `lbr_fri_ros2_stack`, e.g. via (this uses [vcs](https://github.com/dirk-thomas/vcstool#how-to-install-vcstool))
@@ -38,6 +38,19 @@ python -m sphinx -T -E -b html -d _build/doctrees -D language=en . html
 ```
 
 Open and browse the documentation by opening `doc/source/html/index.html`. 
+
+## Build Paper Locally
+To build the [paper](paper/paper.md) via [Docker](https://joss.readthedocs.io/en/latest/submitting.html#docker), run
+
+```shell
+docker run --rm \
+    --volume $PWD/paper:/data \
+    --user $(id -u):$(id -g) \
+    --env JOURNAL=joss \
+    openjournals/inara
+```
+
+inside the `lbr_stack_doc` repository.
 
 ## Acknowledgements
 <img src="https://www.kcl.ac.uk/newimages/Wellcome-EPSRC-Centre-medical-engineering-logo.xa827df3f.JPG?f=webp" alt="wellcome" height="45" width="65" align="left">
