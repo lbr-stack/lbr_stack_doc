@@ -43,11 +43,12 @@ Open and browse the documentation by opening `doc/source/html/index.html`.
 To build the [paper](paper/paper.md) via [Docker](https://joss.readthedocs.io/en/latest/submitting.html#docker), run
 
 ```shell
-docker run --rm \
-    --volume $PWD/paper:/data \
-    --user $(id -u):$(id -g) \
-    --env JOURNAL=joss \
-    openjournals/inara
+docker run --rm -it \
+    -v $PWD:/data \
+    -u $(id -u):$(id -g) \
+    openjournals/inara \
+    -o pdf,crossref,preprint \
+    paper/paper.md
 ```
 
 inside the `lbr_stack_doc` repository.
