@@ -47,7 +47,7 @@ At the `LBR-Stack`'s core are two packages:
 
 All other packages are built on top. These include Python bindings and packages for integration into the Robot Operating System (ROS) and ROS 2:
 
- - **pyFRIClient**: Python bindings for the **fri**.
+ - **pyFRI**: Python bindings for the **fri**.
  - **lbr_fri_ros2_stack**: ROS 1/2 integration of the `KUKA LBR`s through the **fri_vendor**.
 
 For brevity, and due to the architectural advantages over ROS [@ros2], only ROS 2 is considered in the following. The **lbr_fri_ros2_stack** comprises the following packages:
@@ -78,14 +78,14 @@ Limitations with the current FRI solutions are:
 
 The first original contribution of this work is to add support for the `KUKA LBR Med7/14` robots, which, to the best author's knowledge, does not exist in any other work. The second novel contribution of this work is to provide Python bindings. This work solves the maintainability by outsourcing the FRI into the separate **fri** and **fri_vendor** packages, which leaves the FRI's source code untouched and simply provides build support. 4. is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers in **lbr_fri_msgs**. These messages can then be interfaced from ROS 1/2 topics or from the ROS 1/2 hardware abstraction layer.
 
-| Framework       | iiwa | Med | ROS | ROS 2  | RT | FRI | Pos | Imp | Cart Imp | HW IF  | 
-| --------------- | ---- |---- | --- | ------ | -- | ---- | --- | --- | -------- | ------ |
-|[lbr_fri_ros2_stack](https://github.com/lbr-stack/lbr_fri_ros2_stack) | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet |
-| [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros)                    | \bullet |         | \bullet |         | \bullet | \bullet | \bullet | \bullet |         | \bullet |
-| [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2)             | \bullet |         |         | \bullet | \bullet | \bullet | \bullet | \bullet |         | \bullet |
-| [iiwa-stack](https://github.com/IFL-CAMP/iiwa_stack)                 | \bullet |         | \bullet |         |         |         | \bullet | \bullet | \bullet |         |
-| [libiiwa](https://github.com/Toni-SM/libiiwa)                        | \bullet |         | \bullet | \bullet |         |         | \bullet | \bullet | \bullet |         |
-| [KST-KUKA](https://github.com/Modi1987/KST-Kuka-Sunrise-Toolbox)     | \bullet |         |         |         |         |         | \bullet | \bullet | \bullet |         |
+| Framework       | iiwa | Med | ROS | ROS 2  | RT | FRI | pyFRI | Pos | Imp | Cart Imp | HW IF  | 
+| --------------- | ---- |---- | --- | ------ | -- | --- | ----- | --- | --- | -------- | ------ |
+| [lbr-stack](https://github.com/lbr-stack)                        | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet | \bullet |
+| [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros)                | \bullet |         | \bullet |         | \bullet | \bullet |         | \bullet | \bullet |         | \bullet |
+| [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2)         | \bullet |         |         | \bullet | \bullet | \bullet |         | \bullet | \bullet |         | \bullet |
+| [iiwa-stack](https://github.com/IFL-CAMP/iiwa_stack)             | \bullet |         | \bullet |         |         |         |         | \bullet | \bullet | \bullet |         |
+| [libiiwa](https://github.com/Toni-SM/libiiwa)                    | \bullet |         | \bullet | \bullet |         |         |         | \bullet | \bullet | \bullet |         |
+| [KST-KUKA](https://github.com/Modi1987/KST-Kuka-Sunrise-Toolbox) | \bullet |         |         |         |         |         |         | \bullet | \bullet | \bullet |         |
 
 Table: Overview of existing frameworks for interfacing the KUKA LBRs. A square indicates support for the respective feature. List of abbreviations: Hard Real-time (**RT**), Position Control (**Pos**), Impedance Control (**Imp**), Cartesian Impedance Control (**Cart Imp**), Hardware Interface (**HW IF**). 
 
