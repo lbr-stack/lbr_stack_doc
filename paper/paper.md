@@ -57,7 +57,7 @@ For brevity, and due to the architectural advantages over ROS [@ros2], only ROS 
 - **lbr_demos**: Demonstrations for simulation and the real robots.
 - **lbr_fri_msgs**: Interface Definition Language (IDL) equivalent of FRI protocol buffers.
 - **lbr_fri_ros2**: FRI ROS 2 interface through `realtime_tools` [@ros_control].
-- **lbr_hardware_interface**: Interface for `ros2_control` [@ros2_control].
+- **lbr_ros2_control**: Interface and controllers for `ros2_control` [@ros2_control].
 - **lbr_moveit_config**: MoveIt 2 configurations [@moveit].
 
 # Statement of need
