@@ -33,12 +33,16 @@ authors:
 affiliations:
  - name: School of Biomedical Engineering and Image Sciences, King's College London, United Kingdom
    index: 1
-date: 12 May 2023
+date: 21 November 2023
 bibliography: paper.bib
 ---
 
+![Supported robots in the LBR-Stack. From left to right: KUKA LBR IIWA7, IIWA14, Med7, Med14. Visualizations made using Foxglove [^1].](img/joss_figure.png)
+
+[^1]: Foxglove: [https://foxglove.dev/ros](https://foxglove.dev/ros).
+
 # Summary
-The `LBR-Stack` is a collection of packages that simplify the usage and extend the capabilities of KUKA's Fast Robot Interface (FRI) [@fri]. It is designed for mission critical hard real-time applications. Supported are the `KUKA LBR Med7/14` and `KUKA LBR iiwa7/14` robots in the Gazebo simulation [@gazebo] and for communication with real hardware. A demo video can be found [here](https://www.linkedin.com/posts/mhubii_robotics-opensource-ros2-activity-7009974676017848320-S3U5/?utm_source=share&utm_medium=member_desktop).
+The `LBR-Stack` is a collection of packages that simplify the usage and extend the capabilities of KUKA's Fast Robot Interface (FRI) [@fri]. It is designed for mission critical hard real-time applications. Supported are the `KUKA LBR Med7/14` and `KUKA LBR IIWA7/14` robots in the Gazebo simulation [@gazebo] and for communication with real hardware. A demo video can be found [here](https://www.linkedin.com/posts/mhubii_robotics-opensource-ros2-activity-7009974676017848320-S3U5/?utm_source=share&utm_medium=member_desktop). An overview of the software architecture is shown in Figure \ref{fig:fri}.
 
 At the `LBR-Stack`'s core are two packages:
 
@@ -53,12 +57,16 @@ All other packages are built on top. These include Python bindings and packages 
 For brevity, and due to the architectural advantages over ROS [@ros2], only ROS 2 is considered in the following. The **lbr_fri_ros2_stack** comprises the following packages:
 
 - **lbr_bringup**: Python library for launching the different components.
-- **lbr_description**: Description files for the `Med7/14` and `iiwa7/14` robots.
+- **lbr_description**: Description files for the `Med7/14` and `IIWA7/14` robots.
 - **lbr_demos**: Demonstrations for simulation and the real robots.
 - **lbr_fri_msgs**: Interface Definition Language (IDL) equivalent of FRI protocol buffers.
 - **lbr_fri_ros2**: FRI ROS 2 interface through `realtime_tools` [@ros_control].
 - **lbr_ros2_control**: Interface and controllers for `ros2_control` [@ros2_control].
 - **lbr_moveit_config**: MoveIt 2 configurations [@moveit].
+
+![An overview of the overall software architecture. There exists a single source for KUKA's FRI. This design facilitates that downstream packages, i.e. the Python bindings and the ROS 2 package, can easily support multiple FRI versions. The ROS 2 side utilizes vcstool[^2].\label{fig:fri}](img/fri_dependency_architecture.pdf)
+
+[^2]: vcstool: [https://github.com/dirk-thomas/vcstool](https://github.com/dirk-thomas/vcstool).
 
 # Statement of need
 <!-- statement of need in a research context -->
@@ -67,7 +75,7 @@ An overview of existing work that interfaces the KUKA LBRs from an external comp
 
 Limitations with the current FRI solutions are:
 
-1. Only support `iiwa7/14` robots, not `Med7/14`.
+1. Only support `IIWA7/14` robots, not `Med7/14`.
 2. Don't provide Python bindings.
 3. Maintainability:
     * Modified client source code [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros).
@@ -78,7 +86,7 @@ Limitations with the current FRI solutions are:
 
 The first original contribution of this work is to add support for the `KUKA LBR Med7/14` robots, which, to the best author's knowledge, does not exist in any other work. The second novel contribution of this work is to provide Python bindings. This work solves the maintainability by outsourcing the FRI into the separate **fri** and **fri_vendor** packages, which leaves the FRI's source code untouched and simply provides build support. 4. is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers in **lbr_fri_msgs**. These messages can then be interfaced from ROS 1/2 topics or from the ROS 1/2 hardware abstraction layer.
 
-| Framework       | iiwa | Med | ROS | ROS 2  | RT | FRI | pyFRI | Pos | Imp | Cart Imp | HW IF  | 
+| Framework       | IIWA | Med | ROS | ROS 2  | RT | FRI | pyFRI | Pos | Imp | Cart Imp | HW IF  | 
 | --------------- | ---- |---- | --- | ------ | -- | --- | ----- | --- | --- | -------- | ------ |
 | [lbr-stack](https://github.com/lbr-stack)                        | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ |
 | [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros)                | $\bullet$ |           | $\bullet$ |           | $\bullet$ | $\bullet$ |           | $\bullet$ | $\bullet$ |           | $\bullet$ |
