@@ -1,5 +1,6 @@
 # lbr_stack_doc
 [![Documentation Status](https://readthedocs.org/projects/lbr-fri-ros2-stack-doc/badge/?version=humble)](https://lbr-fri-ros2-stack-doc.readthedocs.io/en/humble/?badge=humble)
+[![status](https://joss.theoj.org/papers/c43c82bed833c02503dd47f2637192ef/status.svg)](https://joss.theoj.org/papers/c43c82bed833c02503dd47f2637192ef)
 
 This repository holds the documentation for the [lbr-stack](https://github.com/lbr-stack).
 
@@ -52,6 +53,20 @@ docker run --rm -it \
 ```
 
 inside the `lbr_stack_doc` repository.
+
+## Citation
+If you enjoyed using this repository for your work, we would really appreciate ❤️ if you could cite it, as it helps us to continue offering support.
+
+```
+@misc{huber2023lbrstack,
+      title={LBR-Stack: ROS 2 and Python Integration of KUKA FRI for Med and IIWA Robots}, 
+      author={Martin Huber and Christopher E. Mower and Sebastien Ourselin and Tom Vercauteren and Christos Bergeles},
+      year={2023},
+      eprint={2311.12709},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}
+}
+```
 
 ## Acknowledgements
 <img src="https://www.kcl.ac.uk/newimages/Wellcome-EPSRC-Centre-medical-engineering-logo.xa827df3f.JPG?f=webp" alt="wellcome" height="45" width="65" align="left">
