@@ -17,7 +17,7 @@ cd lbr_stack_doc
 
 ```shell
 wget https://raw.githubusercontent.com/lbr-stack/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos.yaml
-vcs import doc/source < repos.yml
+vcs import doc/source < repos.yaml
 ```
 
 3. In [conf.py](doc/source/conf.py) change
