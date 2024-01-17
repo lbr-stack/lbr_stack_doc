@@ -35,7 +35,7 @@ f"doxysphinx build . html {doxyfile}", shell=True
 Next, go to [doc/source](doc/source/) and run
 
 ```shell
-python -m sphinx -T -E -b html -d _build/doctrees -D language=en . html
+python3 -m sphinx -T -E -b html -d _build/doctrees -D language=en . html
 ```
 
 Open and browse the documentation by opening `doc/source/html/index.html`. 
