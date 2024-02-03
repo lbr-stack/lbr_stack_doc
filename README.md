@@ -16,8 +16,8 @@ cd lbr_stack_doc
 2. Clone the `lbr_fri_ros2_stack`, e.g. via (this uses [vcs](https://github.com/dirk-thomas/vcstool#how-to-install-vcstool))
 
 ```shell
-wget https://raw.githubusercontent.com/lbr-stack/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos.yml
-vcs import doc/source < repos.yml
+wget https://raw.githubusercontent.com/lbr-stack/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos.yaml
+vcs import doc/source < repos.yaml
 ```
 
 3. In [conf.py](doc/source/conf.py) change
@@ -35,7 +35,7 @@ f"doxysphinx build . html {doxyfile}", shell=True
 Next, go to [doc/source](doc/source/) and run
 
 ```shell
-python -m sphinx -T -E -b html -d _build/doctrees -D language=en . html
+python3 -m sphinx -T -E -b html -d _build/doctrees -D language=en . html
 ```
 
 Open and browse the documentation by opening `doc/source/html/index.html`. 
