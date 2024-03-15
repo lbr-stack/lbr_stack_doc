@@ -74,6 +74,7 @@ pygments_style = "sphinx"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "pydata_sphinx_theme"
+html_logo = "../img/logo.png"
 html_theme_options = {
     "github_url": "https://github.com/lbr-stack/lbr_fri_ros2_stack/tree/humble",
     "switcher": {
