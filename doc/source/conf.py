@@ -37,6 +37,7 @@ release = "1.2.5"
 
 extensions = [
     "sphinx_mdinclude",
+    "sphinx_markdown_tables",
     "sphinx_copybutton",
     "sphinx.ext.autosectionlabel",
     "sphinx_panels",

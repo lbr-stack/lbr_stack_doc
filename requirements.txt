@@ -1,8 +1,9 @@
 doxysphinx
 pydata-sphinx-theme
-sphinxcontrib-doxylink
-sphinxcontrib-images
 sphinx-copybutton
+sphinx-markdown-tables
 sphinx-mdinclude
 sphinx-panels
+sphinxcontrib-doxylink
+sphinxcontrib-images
 vcstool
