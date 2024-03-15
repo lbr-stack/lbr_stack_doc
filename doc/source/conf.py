@@ -27,10 +27,10 @@ for doxyfile in doxy_list:
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "lbr_fri_ros2_stack"
+project = "LBR-Stack"
 copyright = "2023, mhubii"
 author = "mhubii"
-release = "1.2.5"
+release = "1.4.3"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -76,11 +76,17 @@ pygments_style = "sphinx"
 
 html_theme = "pydata_sphinx_theme"
 html_logo = "../img/logo.png"
-html_extra_path = ["lbr_fri_ros2_stack"] # for images in README.md
 html_theme_options = {
     "github_url": "https://github.com/lbr-stack/lbr_fri_ros2_stack/tree/humble",
     "navbar_start": ["navbar-logo", "version-switcher"],
+    "navbar_end": ["search-field", "theme-switcher", "navbar-icon-links"],
+    "search_bar_text": "Search...",
+    "navbar_persistent": "",
+    "logo": {
+        "text": project,
+    },
 }
+
 html_context = {
     "default_mode": "light"  # doxysphinx and dropdown don't work well with dark mode
 }
