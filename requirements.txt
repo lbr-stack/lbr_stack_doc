@@ -1,8 +1,8 @@
 doxysphinx
+myst_parser
 pydata-sphinx-theme
 sphinx-copybutton
 sphinx-markdown-tables
-sphinx-mdinclude
 sphinx-panels
 sphinxcontrib-doxylink
 sphinxcontrib-images

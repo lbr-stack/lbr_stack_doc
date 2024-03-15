@@ -36,13 +36,13 @@ release = "1.2.5"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    "sphinx_mdinclude",
     "sphinx_markdown_tables",
     "sphinx_copybutton",
     "sphinx.ext.autosectionlabel",
     "sphinx_panels",
     "sphinxcontrib.images",
     "sphinxcontrib.doxylink",
+    "myst_parser",
 ]
 
 templates_path = ["_templates"]
