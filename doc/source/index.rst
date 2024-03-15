@@ -14,6 +14,7 @@
    lbr_fri_ros2_stack/lbr_demos/doc/lbr_demos
    lbr_fri_ros2_stack/lbr_fri_ros2/doc/lbr_fri_ros2
    fri/doc/fri
+   lbr_fri_ros2_stack/docker/doc/docker
    lbr_fri_ros2_stack/lbr_moveit_config/doc/lbr_moveit_config
    docs/additional_resources
 
