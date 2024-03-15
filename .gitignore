@@ -1,0 +1,6 @@
+# build artifacts
+doc/source/_build/
+doc/source/_images/
+doc/source/html/
+doc/source/docs/doxygen/
+repos.yaml
