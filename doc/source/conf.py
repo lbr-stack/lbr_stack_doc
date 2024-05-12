@@ -74,19 +74,5 @@ pygments_style = "sphinx"
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "pydata_sphinx_theme"
+html_theme = "sphinx_rtd_theme"
 html_logo = "../img/logo.png"
-html_theme_options = {
-    "github_url": "https://github.com/lbr-stack/lbr_fri_ros2_stack/tree/humble",
-    "navbar_start": ["navbar-logo", "version-switcher"],
-    "navbar_end": ["search-field", "theme-switcher", "navbar-icon-links"],
-    "search_bar_text": "Search...",
-    "navbar_persistent": "",
-    "logo": {
-        "text": project,
-    },
-}
-
-html_context = {
-    "default_mode": "light"  # doxysphinx and dropdown don't work well with dark mode
-}

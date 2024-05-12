@@ -1,6 +1,5 @@
 doxysphinx
 myst_parser
-pydata-sphinx-theme
 sphinx-copybutton
 sphinx-markdown-tables
 sphinx-panels
