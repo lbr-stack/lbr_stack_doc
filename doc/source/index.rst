@@ -8,19 +8,28 @@
 
 .. toctree::
    :hidden:
-   :caption: Documentation
+   :caption: Packages
 
    lbr_fri_ros2_stack/lbr_fri_ros2_stack/doc/lbr_fri_ros2_stack
    lbr_fri_ros2_stack/lbr_bringup/doc/lbr_bringup
    lbr_fri_ros2_stack/lbr_demos/doc/lbr_demos
+   lbr_fri_ros2_stack/lbr_fri_ros2/doc/lbr_fri_ros2
+   lbr_fri_ros2_stack/lbr_ros2_control/doc/lbr_ros2_control
    lbr_fri_ros2_stack/docker/doc/docker
    lbr_fri_ros2_stack/lbr_moveit_config/doc/lbr_moveit_config
-   docs/additional_resources
+   lbr_fri_idl/doc/lbr_fri_idl
+
+.. toctree::
+   :hidden:
+   :caption: Hardware Setup
+
+   lbr_fri_ros2_stack/lbr_fri_ros2_stack/doc/hardware_setup
+
+.. toctree::
+   :hidden:
+   :caption: Additional Resources
+
    fri/doc/fri
-   lbr_fri_ros2_stack/lbr_fri_ros2/doc/lbr_fri_ros2
+   docs/kuka_documentation
    Source Code <https://github.com/lbr-stack/lbr_fri_ros2_stack/tree/humble>
    Changelog <https://github.com/lbr-stack/lbr_fri_ros2_stack/releases>
-
-
-
-

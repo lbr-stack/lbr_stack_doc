@@ -1,5 +1,5 @@
-Additional Resources
-====================
+KUKA Documentation
+==================
 .. note::
     These resources may **not** be re-distributed but are accesible on `KUKA Xpert`_.
 
