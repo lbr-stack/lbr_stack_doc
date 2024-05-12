@@ -3,6 +3,8 @@
 
 This repository holds the documentation for the [lbr-stack](https://github.com/lbr-stack).
 
+TODO: update fri repo source vcs
+
 ## Build Documentation Locally
 To build locally:
 1. Clone this repository
