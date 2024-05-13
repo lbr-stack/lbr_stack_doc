@@ -3,6 +3,7 @@ myst_parser
 sphinx-copybutton
 sphinx-markdown-tables
 sphinx-panels
+sphinx-rtd-theme
 sphinxcontrib-doxylink
 sphinxcontrib-images
 vcstool
