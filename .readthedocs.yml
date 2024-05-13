@@ -12,7 +12,7 @@ build:
     - graphviz
   jobs:
     post_install:
-      - vcs import doc/source --input https://raw.githubusercontent.com/lbr-stack/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos.yaml
+      - vcs import doc/source --input https://raw.githubusercontent.com/lbr-stack/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos-fri-1.15.yaml
       - unzip doc/source/fri/FRI-Client-SDK_Cpp.zip -d doc/source/fri/FRI-Client-SDK_Cpp
 
 python:
