@@ -18,6 +18,7 @@
    lbr_fri_ros2_stack/docker/doc/docker
    lbr_fri_ros2_stack/lbr_moveit_config/doc/lbr_moveit_config
    lbr_fri_idl
+   fri
 
 .. toctree::
    :hidden:
