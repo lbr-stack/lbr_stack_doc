@@ -17,7 +17,9 @@ for doxyfile in doxy_list:
 
     # convert doxygen to sphinx, source and build directory need
     # to follow https://boschglobal.github.io/doxysphinx/docs/getting_started.html#build
-    subprocess.run(f"doxysphinx build . $READTHEDOCS_OUTPUT/html {doxyfile}", shell=True)
+    subprocess.run(
+        f"doxysphinx build . $READTHEDOCS_OUTPUT/html {doxyfile}", shell=True
+    )
 
 # Configuration file for the Sphinx documentation builder.
 #
@@ -36,13 +38,14 @@ release = "1.4.3"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    "sphinx_markdown_tables",
-    "sphinx_copybutton",
-    "sphinx.ext.autosectionlabel",
-    "sphinx_panels",
-    "sphinxcontrib.images",
-    "sphinxcontrib.doxylink",
     "myst_parser",
+    "sphinx.ext.autosectionlabel",
+    "sphinx_copybutton",
+    "sphinx_design",
+    "sphinx_markdown_tables",
+    "sphinx_panels",
+    "sphinxcontrib.doxylink",
+    "sphinxcontrib.images",
 ]
 
 templates_path = ["_templates"]

@@ -1,6 +1,7 @@
 doxysphinx
 myst_parser
 sphinx-copybutton
+sphinx-design
 sphinx-markdown-tables
 sphinx-panels
 sphinx-rtd-theme
