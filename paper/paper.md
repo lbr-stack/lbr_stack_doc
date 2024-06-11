@@ -59,7 +59,7 @@ For brevity, and due to the architectural advantages over ROS [@ros2], only ROS 
 - **lbr_bringup**: Python library for launching the different components.
 - **lbr_description**: Description files for the `Med7/14` and `IIWA7/14` robots.
 - **lbr_demos**: Demonstrations for simulation and the real robots.
-- **lbr_fri_msgs**: Interface Definition Language (IDL) equivalent of FRI protocol buffers.
+- **lbr_fri_idl**: Interface Definition Language (IDL) equivalent of FRI protocol buffers.
 - **lbr_fri_ros2**: FRI ROS 2 interface through `realtime_tools` [@ros_control].
 - **lbr_ros2_control**: Interface and controllers for `ros2_control` [@ros2_control].
 - **lbr_moveit_config**: MoveIt 2 configurations [@moveit].
@@ -84,7 +84,7 @@ Limitations with the current FRI solutions are:
     * FRI's cartesian impedance control mode.
     * FRI's cartesian control mode (FRI version 2 and above).
 
-The first original contribution of this work is to add support for the `KUKA LBR Med7/14` robots, which, to the best author's knowledge, does not exist in any other work. The second novel contribution of this work is to provide Python bindings. This work solves the maintainability by outsourcing the FRI into the separate **fri** and **fri_vendor** packages, which leaves the FRI's source code untouched and simply provides build support. 4. is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers in **lbr_fri_msgs**. These messages can then be interfaced from ROS 1/2 topics or from the ROS 1/2 hardware abstraction layer.
+The first original contribution of this work is to add support for the `KUKA LBR Med7/14` robots, which, to the best author's knowledge, does not exist in any other work. The second novel contribution of this work is to provide Python bindings. This work solves the maintainability by outsourcing the FRI into the separate **fri** and **fri_vendor** packages, which leaves the FRI's source code untouched and simply provides build support. 4. is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers in **lbr_fri_idl**. These messages can then be interfaced from ROS 1/2 topics or from the ROS 1/2 hardware abstraction layer.
 
 | Framework       | IIWA | Med | ROS | ROS 2  | RT | FRI | pyFRI | Pos | Imp | Cart Imp | HW IF  | 
 | --------------- | ---- |---- | --- | ------ | -- | --- | ----- | --- | --- | -------- | ------ |
