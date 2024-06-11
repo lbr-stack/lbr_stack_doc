@@ -44,15 +44,14 @@ bibliography: paper.bib
 # Summary
 The `LBR-Stack` is a collection of packages that simplify the usage and extend the capabilities of KUKA's Fast Robot Interface (FRI) [@fri]. It is designed for mission critical hard real-time applications. Supported are the `KUKA LBR Med7/14` and `KUKA LBR IIWA7/14` robots in the Gazebo simulation [@gazebo] and for communication with real hardware. A demo video can be found [here](https://www.linkedin.com/posts/mhubii_robotics-opensource-ros2-activity-7009974676017848320-S3U5/?utm_source=share&utm_medium=member_desktop). An overview of the software architecture is shown in Figure \ref{fig:fri}.
 
-At the `LBR-Stack`'s core are two packages:
+At the `LBR-Stack`'s core is the following package:
 
 - **fri**: Integration of KUKA's original FRI client library into CMake.
-- **fri_vendor**: Vendor library that integrates the **fri** into the ROS 2 build sytem.
 
 All other packages are built on top. These include Python bindings and packages for integration into the Robot Operating System (ROS) and ROS 2:
 
  - **pyFRI**: Python bindings for the **fri**.
- - **lbr_fri_ros2_stack**: ROS 1/2 integration of the `KUKA LBR`s through the **fri_vendor**.
+ - **lbr_fri_ros2_stack**: ROS 1/2 integration of the `KUKA LBR`s through the **fri**.
 
 For brevity, and due to the architectural advantages over ROS [@ros2], only ROS 2 is considered in the following. The **lbr_fri_ros2_stack** comprises the following packages:
 
@@ -84,7 +83,7 @@ Limitations with the current FRI solutions are:
     * FRI's cartesian impedance control mode.
     * FRI's cartesian control mode (FRI version 2 and above).
 
-The first original contribution of this work is to add support for the `KUKA LBR Med7/14` robots, which, to the best author's knowledge, does not exist in any other work. The second novel contribution of this work is to provide Python bindings. This work solves the maintainability by outsourcing the FRI into the separate **fri** and **fri_vendor** packages, which leaves the FRI's source code untouched and simply provides build support. 4. is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers in **lbr_fri_idl**. These messages can then be interfaced from ROS 1/2 topics or from the ROS 1/2 hardware abstraction layer.
+The first original contribution of this work is to add support for the `KUKA LBR Med7/14` robots, which, to the best author's knowledge, does not exist in any other work. The second novel contribution of this work is to provide Python bindings. This work solves the maintainability by outsourcing the FRI into the separate **fri** package, which leaves the FRI's source code untouched and simply provides build support. 4. is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers in **lbr_fri_idl**. These messages can then be interfaced from ROS 1/2 topics or from the ROS 1/2 hardware abstraction layer.
 
 | Framework       | IIWA | Med | ROS | ROS 2  | RT | FRI | pyFRI | Pos | Imp | Cart Imp | HW IF  | 
 | --------------- | ---- |---- | --- | ------ | -- | --- | ----- | --- | --- | -------- | ------ |
