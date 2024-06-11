@@ -37,12 +37,12 @@ date: 21 November 2023
 bibliography: paper.bib
 ---
 
-![Supported robots in the LBR-Stack. From left to right: KUKA LBR IIWA7, IIWA14, Med7, Med14. Visualizations made using Foxglove [^1].](img/joss_figure.png)
+![Supported robots in the LBR-Stack. From left to right: KUKA LBR IIWA 7 R800, IIWA 14 R820, Med 7 R800, Med 14 R820. Visualizations made using Foxglove [^1].](img/joss_figure.png)
 
 [^1]: Foxglove: [https://foxglove.dev/ros](https://foxglove.dev/ros).
 
 # Summary
-The `LBR-Stack` is a collection of packages that simplify the usage and extend the capabilities of KUKA's Fast Robot Interface (FRI) [@fri]. It is designed for mission critical hard real-time applications. Supported are the `KUKA LBR Med7/14` and `KUKA LBR IIWA7/14` robots in the Gazebo simulation [@gazebo] and for communication with real hardware. A demo video can be found [here](https://www.linkedin.com/posts/mhubii_robotics-opensource-ros2-activity-7009974676017848320-S3U5/?utm_source=share&utm_medium=member_desktop). An overview of the software architecture is shown in Figure \ref{fig:fri}.
+The `LBR-Stack` is a collection of packages that simplify the usage and extend the capabilities of KUKA's Fast Robot Interface (FRI) [@fri]. It is designed for mission critical hard real-time applications. Supported are the `KUKA LBR Med 7/14` and `KUKA LBR IIWA 7/14` robots in the Gazebo simulation [@gazebo] and for communication with real hardware. A demo video can be found [here](https://www.linkedin.com/posts/mhubii_robotics-opensource-ros2-activity-7009974676017848320-S3U5/?utm_source=share&utm_medium=member_desktop). An overview of the software architecture is shown in Figure \ref{fig:fri}.
 
 At the `LBR-Stack`'s core is the following package:
 
@@ -74,7 +74,7 @@ An overview of existing work that interfaces the KUKA LBRs from an external comp
 
 Limitations with the current FRI solutions are:
 
-1. Only support `IIWA7/14` robots, not `Med7/14`.
+1. Only support `IIWA 7/14` robots, not `Med 7/14`.
 2. Don't provide Python bindings.
 3. Maintainability:
     * Modified client source code [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros).
@@ -83,7 +83,7 @@ Limitations with the current FRI solutions are:
     * FRI's cartesian impedance control mode.
     * FRI's cartesian control mode (FRI version 2 and above).
 
-The first original contribution of this work is to add support for the `KUKA LBR Med7/14` robots, which, to the best author's knowledge, does not exist in any other work. The second novel contribution of this work is to provide Python bindings. This work solves the maintainability by outsourcing the FRI into the separate **fri** package, which leaves the FRI's source code untouched and simply provides build support. 4. is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers in **lbr_fri_idl**. These messages can then be interfaced from ROS 1/2 topics or from the ROS 1/2 hardware abstraction layer.
+The first original contribution of this work is to add support for the `KUKA LBR Med 7/14` robots, which, to the best author's knowledge, does not exist in any other work. The second novel contribution of this work is to provide Python bindings. This work solves the maintainability by outsourcing the FRI into the separate **fri** package, which leaves the FRI's source code untouched and simply provides build support. 4. is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers in **lbr_fri_idl**. These messages can then be interfaced from ROS 1/2 topics or from the ROS 1/2 hardware abstraction layer.
 
 | Framework       | IIWA | Med | ROS | ROS 2  | RT | FRI | pyFRI | Pos | Imp | Cart Imp | HW IF  | 
 | --------------- | ---- |---- | --- | ------ | -- | --- | ----- | --- | --- | -------- | ------ |
