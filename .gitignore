@@ -1,7 +1,10 @@
+# virtual environment
+lbr_stack_doc_venv/
+
 # build artifacts
 doc/source/_build/
 doc/source/_images/
 doc/source/html/
 doc/source/docs/doxygen/
 doc/source/fri/FRI-Client-SDK_Cpp/
-repos.yaml
+repos-*.yaml

@@ -3,8 +3,6 @@
 
 This repository holds the documentation for the [lbr-stack](https://github.com/lbr-stack).
 
-TODO: update fri repo source vcs
-
 ## Build Documentation Locally
 To build locally:
 1. Clone this repository
@@ -14,14 +12,27 @@ git clone --recursive git@github.com:lbr-stack/lbr_stack_doc.git
 cd lbr_stack_doc
 ```
 
-2. Clone the `lbr_fri_ros2_stack`, e.g. via (this uses [vcs](https://github.com/dirk-thomas/vcstool#how-to-install-vcstool))
+2. Create a virtual environment
+
+```shell
+python3 -m venv ./lbr_stack_doc_venv
+source lbr_stack_doc_venv/bin/activate
+```
+
+3. Install dependencies
+
+```shell
+pip3 install -r requirements.txt
+```
+
+4. Clone the `lbr_fri_ros2_stack`, e.g. via (this uses [vcs](https://github.com/dirk-thomas/vcstool#how-to-install-vcstool))
 
 ```shell
 wget https://raw.githubusercontent.com/lbr-stack/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos-fri-1.15.yaml
-vcs import doc/source < repos.yaml
+vcs import doc/source < repos-fri-1.15.yaml
 ```
 
-3. In [conf.py](doc/source/conf.py) change
+5. In [conf.py](doc/source/conf.py) change
 
 ```python
 f"doxysphinx build . $READTHEDOCS_OUTPUT/html {doxyfile}", shell=True
