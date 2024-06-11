@@ -32,5 +32,6 @@
 
    fri/doc/fri
    docs/kuka_documentation
+   Paper <https://arxiv.org/pdf/2311.12709>
    Source Code <https://github.com/lbr-stack/lbr_fri_ros2_stack/tree/humble>
    Changelog <https://github.com/lbr-stack/lbr_fri_ros2_stack/releases>
