@@ -76,14 +76,14 @@ Limitations with the current FRI solutions are:
 
 1. Only support `IIWA 7/14` robots, not `Med 7/14`.
 2. Don't provide Python bindings.
-3. Maintainability:
-    * Modified client source code [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros).
-    * FRI client library tangled into source code [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2).
+3. Don't support multiple FRI versions:
+    * Modified FRI client source code [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros).
+    * FRI client library tangled into the source code [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2).
 4. Partial support of FRI functionality. Both, [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros) and [iiwa_ros2](https://github.com/ICube-Robotics/iiwa_ros2), exclusively aim at providing implementations of the ROS 1/2 hardware abstraction layer. This does not support:
     * FRI's cartesian impedance control mode.
     * FRI's cartesian control mode (FRI version 2 and above).
 
-The first original contribution of this work is to add support for the `KUKA LBR Med 7/14` robots, which, to the best author's knowledge, does not exist in any other work. The second novel contribution of this work is to provide Python bindings. This work solves the maintainability by outsourcing the FRI into the separate **fri** package, which leaves the FRI's source code untouched and simply provides build support. 4. is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers in **lbr_fri_idl**. These messages can then be interfaced from ROS 1/2 topics or from the ROS 1/2 hardware abstraction layer.
+The first original contribution of this work is to add support for the `KUKA LBR Med 7/14` robots, which, to the best author's knowledge, does not exist in any other work. The second novel contribution of this work is to provide Python bindings. This work solves the support for multiple FRI versions by treating the FRI library as an externally provided library by separating it into the **fri** package, which leaves the FRI's source code untouched and simply provides build support. The partial support for the FRI functionality is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers in **lbr_fri_idl**. These messages can then be interfaced from ROS 1/2 topics via simple controllers or from the ROS 1/2 hardware abstraction layer.
 
 | Framework       | IIWA | Med | ROS | ROS 2  | RT | FRI | pyFRI | Pos | Imp | Cart Imp | HW IF  | 
 | --------------- | ---- |---- | --- | ------ | -- | --- | ----- | --- | --- | -------- | ------ |
