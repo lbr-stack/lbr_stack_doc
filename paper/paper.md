@@ -50,7 +50,7 @@ At the `LBR-Stack`'s core is the following package:
 
 All other packages are built on top. These include Python bindings and packages for integration into the Robot Operating System (ROS) and ROS 2:
 
- - **pyFRI**: Python bindings for the **fri**.
+ - **pyfri**: Python bindings for the **fri**.
  - **lbr_fri_ros2_stack**: ROS 1/2 integration of the `KUKA LBR`s through the **fri**.
 
 For brevity, and due to the architectural advantages over ROS [@ros2], only ROS 2 is considered in the following. The **lbr_fri_ros2_stack** comprises the following packages:
@@ -85,7 +85,7 @@ Limitations with the current FRI solutions are:
 
 The first original contribution of this work is to add support for the `KUKA LBR Med 7/14` robots, which, to the best author's knowledge, does not exist in any other work. The second novel contribution of this work is to provide Python bindings. This work solves the support for multiple FRI versions by treating the FRI library as an externally provided library by separating it into the **fri** package, which leaves the FRI's source code untouched and simply provides build support. The partial support for the FRI functionality is solved by defining an IDL message to KUKA's `nanopb` command and state protocol buffers in **lbr_fri_idl**. These messages can then be interfaced from ROS 1/2 topics via simple controllers or from the ROS 1/2 hardware abstraction layer.
 
-| Framework       | IIWA | Med | ROS | ROS 2  | RT | FRI | pyFRI | Pos | Imp | Cart Imp | HW IF  | 
+| Framework       | IIWA | Med | ROS | ROS 2  | RT | FRI | pyfri | Pos | Imp | Cart Imp | HW IF  | 
 | --------------- | ---- |---- | --- | ------ | -- | --- | ----- | --- | --- | -------- | ------ |
 | [lbr-stack](https://github.com/lbr-stack)                        | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ | $\bullet$ |
 | [iiwa_ros](https://github.com/epfl-lasa/iiwa_ros)                | $\bullet$ |           | $\bullet$ |           | $\bullet$ | $\bullet$ |           | $\bullet$ | $\bullet$ |           | $\bullet$ |

@@ -7,50 +7,56 @@ This repository holds the documentation for the [lbr-stack](https://github.com/l
 To build locally:
 1. Clone this repository
 
-```shell
-git clone --recursive git@github.com:lbr-stack/lbr_stack_doc.git
-cd lbr_stack_doc
-```
+    ```shell
+    git clone --recursive git@github.com:lbr-stack/lbr_stack_doc.git
+    cd lbr_stack_doc
+    ```
 
 2. Create a virtual environment
 
-```shell
-python3 -m venv ./lbr_stack_doc_venv
-source lbr_stack_doc_venv/bin/activate
-```
+    ```shell
+    python3 -m venv ./lbr_stack_doc_venv
+    source lbr_stack_doc_venv/bin/activate
+    ```
 
 3. Install dependencies
 
-```shell
-pip3 install -r requirements.txt
-```
+    ```shell
+    pip3 install -r requirements.txt
+    ```
 
 4. Clone the `lbr_fri_ros2_stack`, e.g. via (this uses [vcs](https://github.com/dirk-thomas/vcstool#how-to-install-vcstool))
 
-```shell
-wget https://raw.githubusercontent.com/lbr-stack/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos-fri-1.15.yaml
-vcs import doc/source < repos-fri-1.15.yaml
-```
+    ```shell
+    wget https://raw.githubusercontent.com/lbr-stack/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos-fri-1.15.yaml
+    vcs import doc/source < repos-fri-1.15.yaml
+    ```
 
-5. In [conf.py](doc/source/conf.py) change
+5. Clone `pyfri`
 
-```python
-f"doxysphinx build . $READTHEDOCS_OUTPUT/html {doxyfile}", shell=True
-```
+    ```shell
+    git clone https://github.com/lbr-stack/pyfri.git doc/source/pyfri
+    ```
 
-to 
+6. In [conf.py](doc/source/conf.py) change
 
-```python
-f"doxysphinx build . html {doxyfile}", shell=True
-```
+    ```python
+    f"doxysphinx build . $READTHEDOCS_OUTPUT/html {doxyfile}", shell=True
+    ```
 
-Next, go to [doc/source](doc/source/) and run
+    to 
 
-```shell
-python3 -m sphinx -T -E -b html -d _build/doctrees -D language=en . html
-```
+    ```python
+    f"doxysphinx build . html {doxyfile}", shell=True
+    ```
 
-Open and browse the documentation by opening `doc/source/html/index.html`. 
+7. Finally, go to [doc/source](doc/source/) and run
+
+    ```shell
+    python3 -m sphinx -T -E -b html -d _build/doctrees -D language=en . html
+    ```
+
+8. Open and browse the documentation by opening `doc/source/html/index.html`.
 
 ## Build Paper Locally
 To build the [paper](paper/paper.md) via [Docker](https://joss.readthedocs.io/en/latest/submitting.html#docker), run
@@ -67,7 +73,7 @@ docker run --rm -it \
 inside the `lbr_stack_doc` repository.
 
 ## Citation
-If you enjoyed using this repository for your work, we would really appreciate ❤️ if you could cite it, as it helps us to continue offering support.
+If you enjoyed using this repository for your work, we would really appreciate ❤️ if you could leave a ⭐ and / or cite it, as it helps us to continue offering support.
 
 ```
 @misc{huber2023lbrstack,
