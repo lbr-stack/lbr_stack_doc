@@ -8,3 +8,14 @@ doc/source/html/
 doc/source/docs/doxygen/
 doc/source/fri/FRI-Client-SDK_Cpp/
 repos-*.yaml
+
+# paper build artifacts
+paper/paper.crossref
+paper/paper.pdf
+paper/paper.preprint.aux
+paper/paper.preprint.fdb_latexmk
+paper/paper.preprint.fls
+paper/paper.preprint.log
+paper/paper.preprint.pdf
+paper/paper.preprint.synctex.gz
+paper/paper.preprint.tex

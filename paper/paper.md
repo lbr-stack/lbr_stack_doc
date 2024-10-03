@@ -42,16 +42,16 @@ bibliography: paper.bib
 [^1]: Foxglove: [https://foxglove.dev/ros](https://foxglove.dev/ros).
 
 # Summary
-The `LBR-Stack` is a collection of packages that simplify the usage and extend the capabilities of KUKA's Fast Robot Interface (FRI) [@fri]. It is designed for mission critical hard real-time applications. Supported are the `KUKA LBR Med 7/14` and `KUKA LBR IIWA 7/14` robots in the Gazebo simulation [@gazebo] and for communication with real hardware. A demo video can be found [here](https://www.linkedin.com/posts/mhubii_robotics-opensource-ros2-activity-7009974676017848320-S3U5/?utm_source=share&utm_medium=member_desktop). An overview of the software architecture is shown in Figure \ref{fig:fri}.
+The `LBR-Stack` is a collection of packages that simplify the usage and extend the capabilities of KUKA's Fast Robot Interface (FRI) [@fri]. It is designed for mission critical hard real-time applications. Supported are the `KUKA LBR Med 7/14` and `KUKA LBR IIWA 7/14` robots in the Gazebo simulation [@gazebo] and for communication with real hardware. A demo video can be found [here](https://drive.google.com/file/d/1_n3dFdFN74yWlijDQiGcNYg65NSG_ACs/view?usp=sharing). An overview of the software architecture is shown in Figure \ref{fig:fri}.
 
 At the `LBR-Stack`'s core is the following package:
 
-- **fri**: Integration of KUKA's original FRI client library into CMake.
+- **fri**: Integration of KUKA's original FRI client library into CMake: [link](https://github.com/lbr-stack/fri).
 
 All other packages are built on top. These include Python bindings and packages for integration into the Robot Operating System (ROS) and ROS 2:
 
- - **pyfri**: Python bindings for the **fri**.
- - **lbr_fri_ros2_stack**: ROS 1/2 integration of the `KUKA LBR`s through the **fri**.
+ - **pyfri**: Python bindings for the **fri**: [link](https://github.com/lbr-stack/pyfri).
+ - **lbr_fri_ros2_stack**: ROS 1/2 integration of the `KUKA LBR`s through the **fri**: [link](https://github.com/lbr-stack/lbr_fri_ros2_stack).
 
 For brevity, and due to the architectural advantages over ROS [@ros2], only ROS 2 is considered in the following. The **lbr_fri_ros2_stack** comprises the following packages:
 

@@ -30,7 +30,7 @@ for doxyfile in doxy_list:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "LBR-Stack"
-copyright = "2023, mhubii"
+copyright = "2024, mhubii"
 author = "mhubii"
 release = "2.0.0"
 
