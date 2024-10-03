@@ -1,7 +1,7 @@
 # lbr_stack_doc
 [![Documentation Status](https://readthedocs.org/projects/lbr-stack/badge/?version=latest)](https://lbr-stack.readthedocs.io/en/latest/?badge=latest) [![status](https://joss.theoj.org/papers/c43c82bed833c02503dd47f2637192ef/status.svg)](https://joss.theoj.org/papers/c43c82bed833c02503dd47f2637192ef)
 
-This repository holds the documentation for the [lbr-stack](https://github.com/lbr-stack).
+This repository holds the documentation for the [LBR-Stack](https://github.com/lbr-stack).
 
 ## Build Documentation Locally
 To build locally:
