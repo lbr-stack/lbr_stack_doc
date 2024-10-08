@@ -31,7 +31,7 @@ authors:
     equal-contrib: true
     affiliation: 1
 affiliations:
- - name: School of Biomedical Engineering and Image Sciences, King's College London, United Kingdom
+ - name: School of Biomedical Engineering and Imaging Sciences, King's College London, United Kingdom
    index: 1
 date: 21 November 2023
 bibliography: paper.bib
