@@ -97,7 +97,7 @@ The first original contribution of this work is to add support for the `KUKA LBR
 Table: Overview of existing frameworks for interfacing the KUKA LBRs. A square indicates support for the respective feature. List of abbreviations: Hard Real-time (**RT**), Position Control (**Pos**), Impedance Control (**Imp**), Cartesian Impedance Control (**Cart Imp**), Hardware Interface (**HW IF**). 
 
 # Acknowledgement
-We want to acknowledge the work in [@iiwa_stack], as their MoveIt configurations were utilized in a first iteration of this project.
+We want to acknowledge the work in @iiwa_stack, as their MoveIt configurations were utilized in a first iteration of this project.
 
 This work was supported by core funding from the Wellcome/EPSRC [WT203148/Z/16/Z; NS/A000049/1], the European Union’s Horizon 2020 research and innovation programme under grant agreement No 101016985 (FAROS project), and EPSRC under the UK Government Guarantee Extension (EP/Y024281/1, VITRRO).
 
