@@ -28,7 +28,7 @@ To build locally:
 4. Clone the `lbr_fri_ros2_stack`, e.g. via (this uses [vcs](https://github.com/dirk-thomas/vcstool#how-to-install-vcstool))
 
     ```shell
-    wget https://raw.githubusercontent.com/lbr-stack/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos-fri-1.15.yaml
+    wget https://raw.githubusercontent.com/lbr-stack/lbr_fri_ros2_stack/jazzy/lbr_fri_ros2_stack/repos-fri-1.15.yaml
     vcs import doc/source < repos-fri-1.15.yaml
     ```
 

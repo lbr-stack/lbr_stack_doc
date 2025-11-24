@@ -5,7 +5,7 @@ submodules:
   recursive: false
 
 build:
-  os: ubuntu-22.04
+  os: ubuntu-24.04
   tools:
     python: "3.8" # doxysphinx python >= 3.8
   apt_packages:
@@ -13,7 +13,7 @@ build:
   jobs:
     post_install:
       # clone lbr_fri_ros2_stack, lbr_fri_idl, and fri through git via vcs
-      - vcs import doc/source --input https://raw.githubusercontent.com/lbr-stack/lbr_fri_ros2_stack/humble/lbr_fri_ros2_stack/repos-fri-1.15.yaml
+      - vcs import doc/source --input https://raw.githubusercontent.com/lbr-stack/lbr_fri_ros2_stack/jazzy/lbr_fri_ros2_stack/repos-fri-1.15.yaml
       # unzip FRI-Client-SDK_Cpp.zip
       - unzip doc/source/fri/FRI-Client-SDK_Cpp.zip -d doc/source/fri/FRI-Client-SDK_Cpp
       # clone pyfri (non-recursive, i.e. skip pybind11 and fri)
