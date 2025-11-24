@@ -19,6 +19,10 @@ build:
       # clone pyfri (non-recursive, i.e. skip pybind11 and fri)
       - git clone https://github.com/lbr-stack/pyfri.git doc/source/pyfri
 
+sphinx:
+  configuration: doc/source/conf.py
+  fail_on_warning: false
+
 python:
    install:
    - requirements: requirements.txt
